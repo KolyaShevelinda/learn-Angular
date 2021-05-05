@@ -10,13 +10,6 @@ import { WORKERS } from '../mock-workers';
 })
 export class WorkersComponent implements OnInit {
 
-  // worker: Worker = {
-  //   id: 1,
-  //   name: 'Nikolay',
-  //   surname: 'Shevelinda',
-  //   profession: 'mechanic'
-  // };
-
   workers = WORKERS;
   selectedWorker?: Worker;
 

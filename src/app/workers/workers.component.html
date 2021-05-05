@@ -5,7 +5,7 @@
     </li>
 </ul>
 
-<div *ngIf="selectedWorker">
+<!-- <div *ngIf="selectedWorker">
     <h2>Краткая информация {{selectedWorker.surname | uppercase}} {{selectedWorker.name | uppercase}}</h2>
     <div><span>id: </span> {{selectedWorker.id}} </div>
     <div>
@@ -20,4 +20,6 @@
         <label for="profession">Профессия работника: </label>
         <input id="profession" [(ngModel)]="selectedWorker.profession" placeholder="name">
     </div>
-</div>
+</div> -->
+
+<app-worker-detail [worker]="selectedWorker"></app-worker-detail>
