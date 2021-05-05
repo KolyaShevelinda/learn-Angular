@@ -1,0 +1,17 @@
+<h2> {{worker.surname | uppercase}} Details</h2>
+<div><span>id: </span> {{worker.id}} </div>
+<!-- <div><span>name: </span> {{worker.name}} </div>
+<div><span>surname: </span> {{worker.surname}} </div>
+<div><span>profession: </span> {{worker.profession}} </div> -->
+<div>
+    <label for="name">Worker name: </label>
+    <input id="name" [(ngModel)]="worker.name" placeholder="name">
+</div>
+<div>
+    <label for="surname">Worker surname: </label>
+    <input id="surname" [(ngModel)]="worker.surname" placeholder="surname">
+</div>
+<div>
+    <label for="profession">Worker profession: </label>
+    <input id="profession" [(ngModel)]="worker.profession" placeholder="name">
+</div>
