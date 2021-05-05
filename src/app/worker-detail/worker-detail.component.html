@@ -2,12 +2,12 @@
     <h2>Краткая информация {{worker.surname | uppercase}} {{worker.name | uppercase}}</h2>
     <div><span>id: </span> {{worker.id}} </div>
     <div>
-        <label for="worker-name">Имя работника: </label>
-        <input id="worker-name" [(ngModel)]="worker.name" placeholder="name">
-    </div>
-    <div>
         <label for="worker-surname">Фамилия работника: </label>
         <input id="worker-surname" [(ngModel)]="worker.surname" placeholder="surname">
+    </div>
+    <div>
+        <label for="worker-name">Имя работника: </label>
+        <input id="worker-name" [(ngModel)]="worker.name" placeholder="name">
     </div>
     <div>
         <label for="profession">Профессия работника: </label>

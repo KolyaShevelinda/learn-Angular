@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Worker } from '../worker';
-import { WORKERS } from '../mock-workers';
+import { WorkerService } from '../worker.service';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-workers',
@@ -9,17 +10,25 @@ import { WORKERS } from '../mock-workers';
   styleUrls: ['./workers.component.css']
 })
 export class WorkersComponent implements OnInit {
-
-  workers = WORKERS;
+  
   selectedWorker?: Worker;
+  workers: Worker[] = [];
 
-  constructor() { }
+  constructor(private workerService: WorkerService,
+              private messageService: MessageService) { }
 
   ngOnInit(): void {
+    this.getWorkers();
   }
 
   onSelect(worker: Worker): void {
     this.selectedWorker = worker;
+    this.messageService.add(`WorkersComponent: Selected worker id=${worker.id}`);
+  }
+
+  getWorkers(): void {
+    // this.workers = this.workerService.getWorkers();
+    this.workerService.getWorkers().subscribe(workers => this.workers = workers);
   }
 
 }
