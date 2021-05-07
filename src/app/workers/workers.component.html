@@ -1,7 +1,12 @@
 <h2>Наши работники</h2>
 <ul class="workers">
-    <li *ngFor="let worker of workers" [class.selected]="worker === selectedWorker" (click)="onSelect(worker)">
+    <!-- <li *ngFor="let worker of workers" [class.selected]="worker === selectedWorker" (click)="onSelect(worker)">
         <span class="badge"> {{worker.id}}</span> {{worker.surname}} {{worker.name}}
+    </li> -->
+    <li *ngFor="let worker of workers">
+        <a routerLink="/detail/{{worker.id}}">
+            <span class="badge"> {{worker.id}}</span> {{worker.surname}} {{worker.name}}
+        </a>
     </li>
 </ul>
 
@@ -22,4 +27,4 @@
     </div>
 </div> -->
 
-<app-worker-detail [worker]="selectedWorker"></app-worker-detail>
+<app-worker-detail></app-worker-detail>

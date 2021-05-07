@@ -1,0 +1,4 @@
+<h2>Доска работников</h2>
+<div class="workers-menu">
+    <a *ngFor="let worker of workers" routerLink="/worker-detail/{{worker.id}}">{{worker.surname}}</a>
+</div>

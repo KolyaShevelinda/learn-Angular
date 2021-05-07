@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Worker } from '../worker';
 import { WorkerService } from '../worker.service';
-import { MessageService } from '../message.service';
+// import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-workers',
@@ -12,19 +12,20 @@ import { MessageService } from '../message.service';
 export class WorkersComponent implements OnInit {
   
   selectedWorker?: Worker;
-  workers: Worker[] = [];
+  workers: Worker[];
 
-  constructor(private workerService: WorkerService,
-              private messageService: MessageService) { }
+  // constructor(private workerService: WorkerService,
+  //             private messageService: MessageService) { }
+  constructor(private workerService: WorkerService) { }
 
   ngOnInit(): void {
     this.getWorkers();
   }
 
-  onSelect(worker: Worker): void {
-    this.selectedWorker = worker;
-    this.messageService.add(`WorkersComponent: Selected worker id=${worker.id}`);
-  }
+  // onSelect(worker: Worker): void {
+  //   this.selectedWorker = worker;
+  //   this.messageService.add(`WorkersComponent: Selected worker id=${worker.id}`);
+  // }
 
   getWorkers(): void {
     // this.workers = this.workerService.getWorkers();

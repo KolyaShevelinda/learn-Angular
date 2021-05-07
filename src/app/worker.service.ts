@@ -18,4 +18,11 @@ export class WorkerService {
     this.messageService.add('WorkerService: fetched workers');
     return workers;
   }
+
+  getWorker(id: number): Observable<Worker[]> {
+    const worker = WORKERS.find(w => w.id === id) as Worker;
+    this.messageService.add(`WorkerService: fetched worker id${id}`);
+    return of(worker[id]);
+  }
+
 }

@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { WorkersComponent } from './workers/workers.component';
 import { WorkerDetailComponent } from './worker-detail/worker-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WorkersComponent,
     WorkerDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
